@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #527BBC;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.6rem;
+    color: #000;
+    text-align: center;
+}
+
+.Container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 0 20px 0px;
+}
+
+/* Sticky Navigation Bar */
+.nav-bar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto; /* Adjust height to auto to adapt to content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F76300;
+    z-index: 1000;
+    padding: 0 20px; /* Adds padding for spacing */
+}
+
+/* Navbar Links */
+.navbar-up {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-up ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-up ul li {
+    margin: 0 20px; /* Adds space between list items */
+}
+
+.navbar-up ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem; /* Slightly smaller font */
+    padding: 10px;   /* Adds padding to links */
+    transition: color 0.3s ease;
+}
+
+.navbar-up ul li a:hover {
+    color: #FFC107;  /* Hover color */
+}
+
+.logo {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-manga {
+    max-width: 10rem;
+    height: 5rem;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+header h2 {
+    display: inline;
+    font-size: 2.5rem;
+}
+
+.logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 843px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo {
+        margin: 0;
+    }
+    .logo-manga {
+        width: 60px;
+        height: 60px;
+    }
+    nav {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    li {
+        padding: 0.5rem;
+    }
+    ul {
+        justify-content: center;
+    }
+    a {
+        font-size: 1.5rem;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Main Manga */
+.Title {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 2.7rem;
+    text-shadow: -2px 3px 2px #E4e5e7, 2px 4px #1A1B1D;
+}
+
+.Container-MainManga {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 2rem;
+}
+.Banner {
+    width: 100%; /* Use full width of the parent container */
+    max-width: 600px; /* Restrict the maximum width */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    margin: 0 auto; /* Center align the image */
+    object-fit: cover; /* Ensure the image fills the container while keeping aspect ratio */
+    border-radius: 10px;
+    box-shadow: 4px 6px 1px #1a1b1d79;
+}
+
+
+.Text-MainManga {
+    width: 40%;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.Subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1A1B1D;
+    text-shadow: 2px 2px #E4e5e7, 2px 2px 1px #1a1b1d79;
+    font-size: 2rem;
+}
+
+@media (max-width: 720px) {
+    .Container-MainManga {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Banner {
+        width: 70vw;
+        margin: auto;
+    }
+    .Text-MainManga {
+        width: 80%;
+    }
+}
+
+/* Manga Catalogue */
+.Catalogue {
+    padding: 20px 10px;
+}
+
+.Container-Manga {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Two, .Three, .For {
+    text-align: left;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.card {
+    margin: 20px 0.2rem;
+    width: 200px;
+    height: 250px;
+    background: center / cover no-repeat var(--i);
+    border-radius: 5px;
+    border-end-start-radius: 20px;
+    border-start-end-radius: 20px;
+    box-shadow: 2px 5px 2px #1A1B1D;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1A1B1D;
+    background: #d30c2081;
+    border-radius: inherit;
+    border-end-start-radius: inherit;
+    border-start-end-radius: inherit;
+    overflow: hidden;
+    opacity: 0;
+    transition: .7s;
+    text-shadow: .1rem .1rem white;
+}
+
+.content:hover {
+    opacity: 1;
+    border: solid thin #d30c20;
+}
+
+@media (max-width: 720px) {
+    .Container-Manga {
+        margin: 0px 20px;
+    }
+}
+
+
+/* Subscribe Section */
+.Email {
+    text-shadow: 2px -2px 2px #E4e5e7;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+input {
+    border: 2px solid #E4e5e7;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 40%;
+    background: #1A1B1D;
+    font-size: 1.1rem;
+    color: #E4e5e7;
+}
+
+input::placeholder {
+    color: #E4e5e7;
+}
+
+.buttom {
+    width: 20%;
+    min-width: 10rem;
+    color: #527ed7;
+    background: #E4e5e7;
+    border: 2px solid #1A1B1D;
+    cursor: pointer;
+    transition: .9s;
+}
+
+.buttom:hover {
+    scale: 1.1;
+    color: #E4e5e7;
+    background-image: linear-gradient(to left, #F76300 0, #527ed7);
+}
+
+@media (max-width: 720px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        width: 70%;
+    }
+}
+
+/* Footer */
+.Final-Page {
+    width: 100%;
+    padding: 10px 0;
+    background: #F76300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.Final-Page .ul-footer {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.disclaimer {
+    margin-right: 30px;
+}
+
+@media (max-width: 720px) {
+    .Final-Page {
+        flex-direction: column;
+    }
+}
